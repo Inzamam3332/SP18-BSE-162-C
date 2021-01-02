@@ -12,7 +12,7 @@ var sessionAuth = require("./middlewares/sessionAuth");
 var app = express();
 app.use(session({ secret: "keyboard cat", cookie: { maxAge: 60000 } }));
 // view engine setup
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "views"));  
 app.set("view engine", "pug");
 app.use(sessionAuth);
 app.use(logger("dev"));
